@@ -85,7 +85,7 @@ You don't need any of this for one project. It starts to matter at two or three:
 
 - [Two Macs, One Desk: How I Fix Problems with Claude](https://youtu.be/rf93txZfUx0): the machine, and the find it / plan it / build it process.
 - [How I Build Marshall Inc](https://youtu.be/7U8FYGVo6c8): a floor for each part of life, in three steps.
-- The Ten Standards: the why behind each of these documents.
+- [The 10 Rules That Run My AI Company](https://youtu.be/dEqfeqZxSZA): the why behind each of these documents.
 - New to Claude Code? Start with the [Start Here playlist](https://www.youtube.com/playlist?list=PLHdusAKY4gWk).
 
 The skill standard is built on Nick Saraev's DOE framework (Directive, Orchestration, Execution); my video on it is [here](https://youtu.be/FzUFVcOuE9o).
