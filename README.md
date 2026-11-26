@@ -29,13 +29,44 @@ Dr. Bryan Marshall · [YouTube](https://www.youtube.com/@drbryanmarshall) · [br
 
 Start with the [SOP](standards/sop.md). It is the front page and points to the other nine.
 
-## How to use them
+## Use them in your own project
 
-Don't copy them whole. They describe one person's setup. Take the parts that fit yours, and let Claude adapt them:
+It takes about five minutes, and Claude does most of it.
 
-> Read the standards in this repo. I run [describe your setup: a class, a team, a small business]. Pick the five rules that would help me most, explain why in a sentence each, and write them into a CLAUDE.md for my project. Keep it short, and ask me before you assume anything about my setup.
+1. **Copy the standards in.** Download this repo (green **Code** button → **Download ZIP**, or `git clone`), and copy the `standards` folder into your project as `docs/standards/`.
+2. **Point Claude at them.** Copy [`starter/CLAUDE.md`](starter/CLAUDE.md) to the root of your project and fill in the first section. Claude Code reads `CLAUDE.md` at the start of every session, and it tells Claude to start with `docs/standards/sop.md`.
+3. **Write your differences down, don't edit the standards.** Copy [`starter/sop-local.md`](starter/sop-local.md) to `docs/sop-local.md`. Anything your project does differently goes there, one section per change, with the reason. That file wins for your project.
+4. **Let Claude fit them to you.** The standards describe one person's setup, so ask Claude to adapt them:
 
-A student version: start with one rule for your group project, like *nobody changes the final file without a review*, and make something check it.
+> Read docs/standards/ and my CLAUDE.md. I run [describe your setup: a class, a team, a small business]. Tell me which rules fit as they are, which ones I should change in docs/sop-local.md, and which I can ignore, with one sentence of why for each. Don't change anything until I say so.
+
+That's it. From then on, every Claude Code session in that project reads the same rules.
+
+**A student version:** a group project needs only one rule to start, like *nobody changes the final file without a review*. Put it in `CLAUDE.md`, and ask Claude to check it before every commit.
+
+## How I roll them out to every floor
+
+Marshall Inc has a floor for each part of my life, and every floor follows the same ten standards. Here's how one set of rules reaches all of them without drifting apart.
+
+```mermaid
+flowchart TD
+    B["Boardroom<br/>the one master copy"] -->|ship-standards| F1["Business floor<br/>docs/standards → link"]
+    B -->|ship-standards| F2["Teaching floor<br/>docs/standards → checked copy"]
+    B -->|ship-standards| F3["Family floor<br/>docs/standards → link"]
+    F1 -. "its own differences" .-> L1["sop-local.md"]
+    F2 -. "its own differences" .-> L2["sop-local.md"]
+    F1 -->|"a change for everyone?<br/>a request (GitHub issue)"| B
+```
+
+- **One master copy.** The standards live in exactly one place, the Boardroom (my general manager). Only the Boardroom writes a standard, and the Security floor writes the security standard.
+- **Pushed down, not copied around.** A script (`ship-standards`) gives every floor a link to the master copy, so a change made once reaches every floor at once. A floor that can't follow a link (one whose repo travels to a laptop) gets a copy instead, verified by checksum.
+- **Never edited on a floor.** A guard script refuses an edit made through a link, and the next push overwrites a copy anyway.
+- **Differences go in `sop-local.md`.** A floor that works differently writes the change and the reason in its own `sop-local.md`. It wins for that floor, except over the hard restrictions.
+- **The hard rules live in every `CLAUDE.md` too.** An agent that has to follow a link to learn a rule will sometimes not follow it, so the rules that must never break are repeated in each floor's contract.
+- **Changes go up as requests.** If a floor needs a rule changed for everyone, it files a request (a GitHub issue) to the Boardroom, saying what the standard says, what's actually true, and how that was checked.
+- **A script checks every floor.** `district-ready` confirms each floor's standards are linked or current, that no link is broken, and that its `sop-local.md` is real, not the blank template.
+
+You don't need any of this for one project. It starts to matter at two or three: keep one master copy and link to it, rather than letting copies drift.
 
 ## Words you'll see
 
