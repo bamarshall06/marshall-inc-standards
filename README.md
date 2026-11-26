@@ -60,6 +60,7 @@ flowchart TD
 
 - **One master copy.** The standards live in exactly one place, the Boardroom (my general manager). Only the Boardroom writes a standard, and the Security floor writes the security standard.
 - **Pushed down, not copied around.** A script (`ship-standards`) gives every floor a link to the master copy, so a change made once reaches every floor at once. A floor that can't follow a link (one whose repo travels to a laptop) gets a copy instead, verified by checksum.
+- **A notice tells everyone.** When a standard changes, it changes once, in the Boardroom. The Boardroom then sends a notice to every floor saying the standards were updated. Each floor reads the change, adjusts how it works to match, and archives the notice; a notice still sitting at the top of a floor's messages is work that floor hasn't done yet.
 - **Never edited on a floor.** A guard script refuses an edit made through a link, and the next push overwrites a copy anyway.
 - **Differences go in `sop-local.md`.** A floor that works differently writes the change and the reason in its own `sop-local.md`. It wins for that floor, except over the hard restrictions.
 - **The hard rules live in every `CLAUDE.md` too.** An agent that has to follow a link to learn a rule will sometimes not follow it, so the rules that must never break are repeated in each floor's contract.
