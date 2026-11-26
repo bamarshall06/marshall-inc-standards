@@ -1,0 +1,59 @@
+# Marshall Inc Standards
+
+The ten standards that run Marshall Inc: one Mac, a "floor" for each part of my life, and Claude Code sessions doing the work on every floor. Every session reads these before it does anything.
+
+They're shared here as they're actually used, with real names, paths and accounts swapped for generic ones. They are long and specific on purpose. Each one was written because something broke.
+
+Dr. Bryan Marshall · [YouTube](https://www.youtube.com/@drbryanmarshall) · [bryanmarshall.com](https://bryanmarshall.com)
+
+## The pattern behind every standard
+
+1. **Something breaks**, and I notice.
+2. **I write the rule down**, in a file every session reads.
+3. **A script checks it**, so nobody has to remember it.
+
+## The ten
+
+| # | Standard | What broke | What it does for the whole company |
+|---|---|---|---|
+| 1 | [The SOP](standards/sop.md) | Every session did a task its own way, so nothing matched. | One path for every task, from an issue to a check, so any session can pick up any task. |
+| 2 | [Organization](standards/organization-standard.md) | Jobs overlapped, and nobody could say who owned what. | One job per room, and a fixed direction for things to flow. Every job has one owner. |
+| 3 | [GitHub](standards/github-standard.md) | One session committed another session's half-finished work. | Each session ships only the files it touched; every change starts as an issue in a milestone. |
+| 4 | [The brain](standards/brain-standard.md) | Notes were scattered, and received documents ended up in git. | What you wrote is a markdown note; what you received is a document with a small JSON summary beside it. One place to look. |
+| 5 | [Skills (DOE)](standards/doe-framework.md) | Small errors multiply: 90% right per step is 59% after five steps. | The model plans and plain scripts do the counting, so a skill gives the same answer every time. |
+| 6 | [The hall](standards/hall-standard.md) | Every floor was set up a little differently. | Every floor has the same parts, and a script checks each one; a check that couldn't run is never a pass. |
+| 7 | [Communication](standards/communication-standard.md) | Things were filed by topic, not by owner, and landed on the wrong floor. | Route by one fact, whose it is. Nothing gets lost, and the top of each inbox is what's still open. |
+| 8 | [Security](standards/security-standard.md) | A backup script once copied a live server key into a cloud folder. | Every secret lives in a vault, one per floor, and each floor can open only its own. |
+| 9 | [Deploys](standards/deploy-standard.md) | Shipping failed nine different ways, most of them blaming the wrong thing. | Every trap is written down, no secrets ship, and a deploy is done when the live site says it's healthy. |
+| 10 | [The software factory](standards/software-factory.md) | A builder that can edit its own test can always pass. | The proof lives where the builder can't touch it, and the whole thing is tested once at the end. |
+
+Start with the [SOP](standards/sop.md). It is the front page and points to the other nine.
+
+## How to use them
+
+Don't copy them whole. They describe one person's setup. Take the parts that fit yours, and let Claude adapt them:
+
+> Read the standards in this repo. I run [describe your setup: a class, a team, a small business]. Pick the five rules that would help me most, explain why in a sentence each, and write them into a CLAUDE.md for my project. Keep it short, and ask me before you assume anything about my setup.
+
+A student version: start with one rule for your group project, like *nobody changes the final file without a review*, and make something check it.
+
+## Words you'll see
+
+| Word | Meaning |
+|---|---|
+| Hall, district, floor | One part of my life, with its own volume, repos, notes and password vault (Business, Teaching, Money, Family…). |
+| Boardroom, GM | The general manager: it writes these standards and takes in anything new. |
+| Computer Room | Builds the Marshall Inc app every session starts from. |
+| Security | Owns every secret, server key and backup. |
+| Worker, District Manager | Claude Code sessions: a manager plans the work, workers each take one issue. |
+| Brain | A folder of markdown notes in its own git repo, plus a search index. |
+| `bin/ship`, `district-ready`… | Scripts that do the checking. They aren't in this repo; the standards say what they must do. |
+
+## The videos
+
+- [Two Macs, One Desk: How I Fix Problems with Claude](https://youtu.be/rf93txZfUx0): the machine, and the find it / plan it / build it process.
+- [How I Build Marshall Inc](https://youtu.be/7U8FYGVo6c8): a floor for each part of life, in three steps.
+- The Ten Standards: the why behind each of these documents.
+- New to Claude Code? Start with the [Start Here playlist](https://www.youtube.com/playlist?list=PLHdusAKY4gWk).
+
+The skill standard is built on Nick Saraev's DOE framework (Directive, Orchestration, Execution); my video on it is [here](https://youtu.be/FzUFVcOuE9o).
