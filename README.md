@@ -33,6 +33,8 @@ Start with the [SOP](standards/sop.md). It is the front page and points to the o
 
 It takes about five minutes, and Claude does most of it.
 
+**Want a ready-made building instead?** [marshall-inc-starter](https://github.com/bamarshall06/marshall-inc-starter) is a template repo with these standards already in place, an HQ contract, three example floors and four small scripts. Click **Use this template** and follow its `GETTING-STARTED.md`.
+
 1. **Copy the standards in.** Download this repo (green **Code** button → **Download ZIP**, or `git clone`), and copy the `standards` folder into your project as `docs/standards/`.
 2. **Point Claude at them.** Copy [`starter/CLAUDE.md`](starter/CLAUDE.md) to the root of your project and fill in the first section. Claude Code reads `CLAUDE.md` at the start of every session, and it tells Claude to start with `docs/standards/sop.md`.
 3. **Write your differences down, don't edit the standards.** Copy [`starter/sop-local.md`](starter/sop-local.md) to `docs/sop-local.md`. Anything your project does differently goes there, one section per change, with the reason. That file wins for your project.
